@@ -6,21 +6,20 @@ return (
 
 <View style={estilo.container}> 
 
-    <View style={{ 
-        backgroundColor: '#0A8F11',
-        flex: 1,
-    }}>
+    <View style={{ backgroundColor: '#0A8F11', flex: 1, }}>
+
         <Cabeca />  
-          
+
     </View>
 
-    <View style={{
-      flex: 4,
-      backgroundColor: "white"
-    }}>
+    <View style={{ flex: 4, backgroundColor: "white"}}>
 
         <Meio />
 
+    </View>
+
+    <View>
+    
     </View>
 
 </View>
@@ -79,7 +78,7 @@ export function Meio() {
     )
 }
 
-export function Final() {
+export function Fim() {
 
 }
 
