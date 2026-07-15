@@ -18,8 +18,10 @@ return (
 
     </View>
 
-    <View>
-    
+    <View style={{ flex: 1, backgroundColor: "blue"}}>
+
+        <Fim />
+
     </View>
 
 </View>
@@ -28,6 +30,7 @@ return (
 
 export function Cabeca() {
 return (
+
 <View style={estilo.orgCorpo}>
 
     <Text style={estilo.titulo}>
@@ -79,8 +82,16 @@ export function Meio() {
 }
 
 export function Fim() {
+    return (
 
-}
+    <View style={estilo.orgCorpo}>
+
+        <Image source={require('../arquivos/ceu-e-nuvens.jpg')}
+        style={estilo.imagem} />
+
+    </View>
+
+)}
 
 const estilo = StyleSheet.create ({
 
@@ -123,6 +134,10 @@ const estilo = StyleSheet.create ({
         color: 'white',
         width: "80%"
     
-    }
+    },
 
+    imagem: {
+        width: 400,
+        height:100,
+    }
 })
