@@ -10,14 +10,16 @@ return (
         backgroundColor: '#0A8F11',
         flex: 1,
     }}>
-        <Cabeca />
-        
+        <Cabeca />  
+          
     </View>
 
     <View style={{
       flex: 4,
       backgroundColor: "white"
     }}>
+
+        <Meio />
 
     </View>
 
@@ -48,11 +50,30 @@ export function Meio() {
     
     return (
         
-        <View>
+        <View style={estilo.orgCorpo}>
 
-            <Text>
-        
+            <Text style={estilo.titulo2}>
+            INSIRA SEUS DADOS
             </Text>
+
+
+            <TextInput
+            placeholder="Digite seu nome"
+            value={nome}
+            onChangeText={setNome}
+            style={estilo.input}
+            />
+
+            <TextInput
+            placeholder="Crie uma senha"
+            keyboardType="numeric"
+            secureTextEntry
+            value={senha}
+            onChangeText={setSenha}
+            style={estilo.input}
+            />
+
+            
 
         </View>
     )
@@ -80,6 +101,13 @@ const estilo = StyleSheet.create ({
         color: 'white'
     },
 
+    titulo2: {
+        fontSize: 24,
+        textAlign: 'center',
+        color: 'black',
+        padding: 10,
+    },
+
     subtitulo: {
         fontSize: 15,
         textAlign: 'center',
@@ -89,9 +117,10 @@ const estilo = StyleSheet.create ({
 
     input: {
         borderWidth: 1,
-        margin: 10,
-        padding: 10,
+        margin: 14,
+        padding: 11,
         backgroundColor: 'gray',
+        placeholderTextColor: "white",
         color: 'white',
         width: "80%"
     
